@@ -1,7 +1,11 @@
 data/qdrant_storage/
 data/out/
 data/processed/
-data/eval/
+# data/eval/ (keep logs)
+data/eval/*
+!data/eval/*.txt
+!data/eval/*.csv
+
 data/_personal_do_not_commit/
 
 data/raw/*.pdf
@@ -17,7 +21,6 @@ data/raw/
 data/processed/
 data/qdrant_storage/
 data/out/
-data/eval/
 data/qdrant_storage/
 data/processed/
 data/processed/*
