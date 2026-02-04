@@ -18,3 +18,13 @@ data/processed/
 data/qdrant_storage/
 data/out/
 data/eval/
+data/qdrant_storage/
+data/processed/
+data/processed/*
+*.pkl
+
+.venv/
+**/.DS_Store
+data/qdrant_storage/
+data/processed/
+*.pkl
