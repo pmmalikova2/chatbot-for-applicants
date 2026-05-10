@@ -1,0 +1,29 @@
+name: exp_embedder_bge
+collection_name: hse_emb_bge
+qdrant_host: localhost
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: ollama
+  model: bge-m3
+
+retriever:
+  type: dense
+  top_k: 5
+
+reranker:
+  type: none
+
+generator:
+  type: none
