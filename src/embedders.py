@@ -61,23 +61,35 @@ class OllamaEmbedder:
         self.model_name = model_name
         self.base_url = base_url.rstrip("/")
         self.name = f"ollama-{model_name}"
-        probe = self._call("ping")
+        probe = self._embed_one("ping")
         self.dim = len(probe)
 
-    def _call(self, text: str) -> list[float]:
+    def _embed_one(self, text: str) -> list[float]:
         r = self.requests.post(
-            f"{self.base_url}/api/embeddings",
-            json={"model": self.model_name, "prompt": text},
+            f"{self.base_url}/api/embed",
+            json={"model": self.model_name, "input": text},
             timeout=120,
         )
         r.raise_for_status()
-        return r.json()["embedding"]
+        data = r.json()
+        return data["embeddings"][0]
+
+    def _embed_batch(self, texts: list[str]) -> list[list[float]]:
+        r = self.requests.post(
+            f"{self.base_url}/api/embed",
+            json={"model": self.model_name, "input": texts},
+            timeout=600,
+        )
+        r.raise_for_status()
+        data = r.json()
+        return data["embeddings"]
 
     def encode(self, texts: list[str], is_query: bool = False) -> np.ndarray:
+        batch_size = 32
         out = []
-        for t in texts:
-            v = self._call(t)
-            out.append(v)
+        for i in range(0, len(texts), batch_size):
+            chunk = texts[i:i + batch_size]
+            out.extend(self._embed_batch(chunk))
         arr = np.array(out, dtype=np.float32)
         norms = np.linalg.norm(arr, axis=1, keepdims=True)
         norms[norms == 0] = 1.0
