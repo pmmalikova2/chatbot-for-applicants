@@ -7,7 +7,7 @@ class QdrantStore:
         from qdrant_client import QdrantClient
         from qdrant_client.http import models as qm
         self.qm = qm
-        self.client = QdrantClient(host=host, port=port)
+        self.client = QdrantClient(host=host, port=port, prefer_grpc=False, https=False, timeout=60)
         self.collection_name = collection_name
         self.dim = dim
 
