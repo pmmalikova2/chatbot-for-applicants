@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Models / cache
+.cache/
+models/
+*.bin
+
+# Qdrant local data
+qdrant_storage/
+
+# Experiment artifacts (большие)
+results/*/raw_*.json
+
+# Secrets
+.env
