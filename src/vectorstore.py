@@ -42,10 +42,11 @@ class QdrantStore:
         if points:
             self.client.upsert(collection_name=self.collection_name, points=points)
 
-    def search(self, query_vector: np.ndarray, top_k: int = 5) -> list[dict]:
-        hits = self.client.search(
+    def search(self, query_vector, top_k: int = 5) -> list[dict]:
+        result = self.client.query_points(
             collection_name=self.collection_name,
-            query_vector=query_vector.tolist(),
+            query=query_vector.tolist(),
             limit=top_k,
+            with_payload=True,
         )
-        return [{"score": h.score, **h.payload} for h in hits]
+        return [{"score": p.score, **p.payload} for p in result.points]
