@@ -1,0 +1,35 @@
+name: exp_generation_best
+collection_name: hse_gen_best
+qdrant_host: localhost
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: dense
+  top_k: 10
+
+reranker:
+  type: cross_encoder
+  model: BAAI/bge-reranker-v2-m3
+  top_k: 3
+
+generator:
+  type: ollama
+  model: qwen2.5:7b-instruct
+  temperature: 0.2
+  max_tokens: 400
+  base_url: http://localhost:11434
