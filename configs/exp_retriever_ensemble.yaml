@@ -1,0 +1,30 @@
+name: exp_retriever_ensemble
+collection_name: hse_ensemble
+qdrant_host: localhost
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: ensemble
+  top_k: 5
+  bm25_weight: 0.5
+
+reranker:
+  type: none
+
+generator:
+  type: none
