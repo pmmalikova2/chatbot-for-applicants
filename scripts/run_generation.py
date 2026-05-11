@@ -12,6 +12,7 @@ def main():
     parser.add_argument("--config", required=True)
     parser.add_argument("--qa", default="data/qa.csv")
     parser.add_argument("--out", default=None)
+    parser.add_argument("--sample-size", type=int, default=None)
     args = parser.parse_args()
 
     cfg = load_config(args.config)
@@ -23,6 +24,22 @@ def main():
 
     gold = load_gold_set(args.qa)
     print(f"[+] Loaded {len(gold)} gold questions")
+    if args.sample_size and args.sample_size < len(gold):
+        import random
+        random.seed(42)
+        by_category = {}
+        for q in gold:
+            by_category.setdefault(q.category, []).append(q)
+        per_cat = max(1, args.sample_size // len(by_category))
+        sampled = []
+        for cat, items in by_category.items():
+            random.shuffle(items)
+            sampled.extend(items[:per_cat])
+        if len(sampled) > args.sample_size:
+            random.shuffle(sampled)
+            sampled = sampled[:args.sample_size]
+        gold = sampled
+        print(f"[+] Sampled down to {len(gold)} questions")
 
     results = []
     total_latency = 0.0
