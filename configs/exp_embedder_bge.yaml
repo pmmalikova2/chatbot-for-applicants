@@ -15,8 +15,8 @@ chunker:
   overlap: 200
 
 embedder:
-  type: ollama
-  model: bge-m3
+  type: sentence_transformer
+  model: BAAI/bge-m3
 
 retriever:
   type: dense

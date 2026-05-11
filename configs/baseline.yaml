@@ -1,6 +1,6 @@
 name: baseline
 collection_name: hse_admission_baseline
-qdrant_host: localhost
+qdrant_host: 127.0.0.1
 qdrant_port: 6333
 
 preprocessing:
