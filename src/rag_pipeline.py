@@ -41,6 +41,7 @@ def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
             port=cfg.qdrant_port,
             collection_name=cfg.collection_name,
             dim=embedder.dim,
+            path=cfg.qdrant_path,
         )
         store.recreate_collection()
         store.upsert_chunks(chunks, vectors)

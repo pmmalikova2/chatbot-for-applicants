@@ -3,11 +3,16 @@ from src.chunking import Chunk
 
 
 class QdrantStore:
-    def __init__(self, host: str, port: int, collection_name: str, dim: int):
+    def __init__(self, host: str, port: int, collection_name: str, dim: int, path: str = ""):
         from qdrant_client import QdrantClient
         from qdrant_client.http import models as qm
         self.qm = qm
-        self.client = QdrantClient(host=host, port=port, prefer_grpc=False, https=False, timeout=60)
+        if path and path.strip():
+            from pathlib import Path
+            Path(path).mkdir(parents=True, exist_ok=True)
+            self.client = QdrantClient(path=path)
+        else:
+            self.client = QdrantClient(host=host, port=port, prefer_grpc=False, https=False, timeout=60)
         self.collection_name = collection_name
         self.dim = dim
 

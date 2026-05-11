@@ -54,6 +54,7 @@ class ExperimentConfig:
     collection_name: str = "hse_admission_baseline"
     qdrant_host: str = "localhost"
     qdrant_port: int = 6333
+    qdrant_path: str = ""
     preprocessing: PreprocessingConfig = field(default_factory=PreprocessingConfig)
     chunker: ChunkerConfig = field(default_factory=ChunkerConfig)
     embedder: EmbedderConfig = field(default_factory=EmbedderConfig)
@@ -71,6 +72,7 @@ def load_config(path: str | Path) -> ExperimentConfig:
     cfg.collection_name = raw.get("collection_name", cfg.collection_name)
     cfg.qdrant_host = raw.get("qdrant_host", cfg.qdrant_host)
     cfg.qdrant_port = raw.get("qdrant_port", cfg.qdrant_port)
+    cfg.qdrant_path = raw.get("qdrant_path", cfg.qdrant_path)
 
     if "preprocessing" in raw:
         cfg.preprocessing = PreprocessingConfig(**raw["preprocessing"])
