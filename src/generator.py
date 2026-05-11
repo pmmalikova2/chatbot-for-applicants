@@ -1,7 +1,12 @@
 from dataclasses import dataclass
 import requests
+import os
+from dotenv import load_dotenv
 from src.retrieval import RetrievedChunk
 from src.config import GeneratorConfig
+
+
+load_dotenv()
 
 
 SYSTEM_PROMPT = (
@@ -66,6 +71,29 @@ class OllamaGenerator:
         return Generation(answer=answer, used_chunks=chunks, raw_response=data)
 
 
+class OpenAIGenerator:
+    def __init__(self, model: str, temperature: float, max_tokens: int):
+        from openai import OpenAI
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.model = model
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+
+    def generate(self, query: str, chunks: list[RetrievedChunk]) -> Generation:
+        user = build_user_prompt(query, chunks)
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": user},
+            ],
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+        )
+        answer = response.choices[0].message.content.strip()
+        return Generation(answer=answer, used_chunks=chunks, raw_response={"id": response.id})
+
+
 def build_generator(cfg: GeneratorConfig):
     if cfg.type == "none":
         return NoopGenerator()
@@ -73,6 +101,12 @@ def build_generator(cfg: GeneratorConfig):
         return OllamaGenerator(
             model=cfg.model,
             base_url=cfg.base_url,
+            temperature=cfg.temperature,
+            max_tokens=cfg.max_tokens,
+        )
+    if cfg.type == "openai":
+        return OpenAIGenerator(
+            model=cfg.model,
             temperature=cfg.temperature,
             max_tokens=cfg.max_tokens,
         )
