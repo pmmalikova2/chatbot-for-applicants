@@ -2,6 +2,7 @@ name: exp_generation_openai_best
 collection_name: hse_gen_openai_best
 qdrant_host: localhost
 qdrant_port: 6333
+qdrant_path: data/qdrant_local_openai_best
 
 preprocessing:
   lowercase: false
