@@ -21,7 +21,7 @@ embedder:
 
 retriever:
   type: dense
-  top_k: 5
+  top_k: 15
 
 reranker:
   type: none

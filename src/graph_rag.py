@@ -120,24 +120,36 @@ class GraphEnhancedRetriever:
         query_entities = self.builder.extract_query_entities(query)
         graph_chunk_ids = self.kg.find_related_chunks(query_entities)
 
+        boosted = []
         seen = set()
-        combined = []
         for r in base_results:
+            boost = 0.3 if r.chunk_id in graph_chunk_ids else 0.0
+            boosted.append(RetrievedChunk(
+                text=r.text,
+                doc_id=r.doc_id,
+                doc_title=r.doc_title,
+                doc_url=r.doc_url,
+                chunk_id=r.chunk_id,
+                score=r.score + boost,
+                rank=0,
+            ))
             seen.add(r.chunk_id)
-            combined.append(r)
 
         for cid in graph_chunk_ids:
             if cid not in seen and cid in self.chunk_map:
                 c = self.chunk_map[cid]
-                combined.append(RetrievedChunk(
+                boosted.append(RetrievedChunk(
                     text=c.text,
                     doc_id=c.doc_id,
                     doc_title=c.doc_title,
                     doc_url=c.doc_url,
                     chunk_id=c.chunk_id,
-                    score=0.0,
-                    rank=len(combined),
+                    score=0.2,
+                    rank=0,
                 ))
                 seen.add(cid)
 
-        return combined[:self.top_k]
+        boosted.sort(key=lambda x: x.score, reverse=True)
+        for i, r in enumerate(boosted):
+            r.rank = i
+        return boosted[:self.top_k]
