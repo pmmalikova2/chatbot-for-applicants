@@ -61,6 +61,7 @@ class ExperimentConfig:
     retriever: RetrieverConfig = field(default_factory=RetrieverConfig)
     reranker: RerankerConfig = field(default_factory=RerankerConfig)
     generator: GeneratorConfig = field(default_factory=GeneratorConfig)
+    query_rewriter: dict = field(default_factory=dict)
 
 
 def load_config(path: str | Path) -> ExperimentConfig:
@@ -86,5 +87,6 @@ def load_config(path: str | Path) -> ExperimentConfig:
         cfg.reranker = RerankerConfig(**raw["reranker"])
     if "generator" in raw:
         cfg.generator = GeneratorConfig(**raw["generator"])
+    cfg.query_rewriter = raw.get("query_rewriter", {})
 
     return cfg

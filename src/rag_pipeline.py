@@ -8,6 +8,7 @@ from src.vectorstore import QdrantStore
 from src.retrieval import DenseRetriever, BM25Retriever, EnsembleRetriever, RetrievedChunk
 from src.reranker import build_reranker
 from src.generator import build_generator, Generation
+from src.query_rewriter import build_rewriter
 
 
 @dataclass
@@ -19,6 +20,7 @@ class IndexedPipeline:
     retriever: object
     reranker: object
     generator: object
+    rewriter: object
 
 
 def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
@@ -59,6 +61,7 @@ def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
 
     reranker = build_reranker(cfg.reranker)
     generator = build_generator(cfg.generator)
+    rewriter = build_rewriter(cfg)
 
     return IndexedPipeline(
         cfg=cfg,
@@ -68,11 +71,13 @@ def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
         retriever=retriever,
         reranker=reranker,
         generator=generator,
+        rewriter=rewriter,
     )
 
 
 def query_pipeline(pipeline: IndexedPipeline, query: str) -> tuple[list[RetrievedChunk], Generation]:
-    initial = pipeline.retriever.retrieve(query)
+    rewritten = pipeline.rewriter.rewrite(query)
+    initial = pipeline.retriever.retrieve(rewritten)
     reranked = pipeline.reranker.rerank(query, initial)
     generation = pipeline.generator.generate(query, reranked)
     return reranked, generation
