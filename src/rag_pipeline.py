@@ -10,6 +10,7 @@ from src.reranker import build_reranker
 from src.generator import build_generator, Generation
 from src.query_rewriter import build_rewriter
 from src.agent import build_agent
+from src.graph_rag import GraphRAGBuilder, GraphEnhancedRetriever
 
 
 @dataclass
@@ -60,6 +61,12 @@ def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
         retriever = EnsembleRetriever(dense, sparse, cfg.retriever.bm25_weight, cfg.retriever.top_k)
     else:
         raise ValueError(f"Unknown retriever type: {cfg.retriever.type}")
+
+    if cfg.graph_rag and cfg.graph_rag.get("enabled", False):
+        graph_builder = GraphRAGBuilder(model=cfg.graph_rag.get("model", "gpt-4o-mini"))
+        print("[*] Building knowledge graph...")
+        kg = graph_builder.build_graph(chunks)
+        retriever = GraphEnhancedRetriever(retriever, kg, graph_builder, chunks, cfg.retriever.top_k)
 
     reranker = build_reranker(cfg.reranker)
     generator = build_generator(cfg.generator)

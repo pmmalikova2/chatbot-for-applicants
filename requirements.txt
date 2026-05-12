@@ -32,3 +32,4 @@ matplotlib>=3.7
 seaborn>=0.12
 openai>=1.40
 python-dotenv>=1.0
+networkx>=3.0
