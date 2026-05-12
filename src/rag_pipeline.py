@@ -9,6 +9,7 @@ from src.retrieval import DenseRetriever, BM25Retriever, EnsembleRetriever, Retr
 from src.reranker import build_reranker
 from src.generator import build_generator, Generation
 from src.query_rewriter import build_rewriter
+from src.agent import build_agent
 
 
 @dataclass
@@ -21,6 +22,7 @@ class IndexedPipeline:
     reranker: object
     generator: object
     rewriter: object
+    agent: object
 
 
 def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
@@ -62,6 +64,7 @@ def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
     reranker = build_reranker(cfg.reranker)
     generator = build_generator(cfg.generator)
     rewriter = build_rewriter(cfg)
+    agent = build_agent(cfg)
 
     return IndexedPipeline(
         cfg=cfg,
@@ -72,12 +75,25 @@ def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
         reranker=reranker,
         generator=generator,
         rewriter=rewriter,
+        agent=agent,
     )
 
 
-def query_pipeline(pipeline: IndexedPipeline, query: str) -> tuple[list[RetrievedChunk], Generation]:
-    rewritten = pipeline.rewriter.rewrite(query)
-    initial = pipeline.retriever.retrieve(rewritten)
-    reranked = pipeline.reranker.rerank(query, initial)
-    generation = pipeline.generator.generate(query, reranked)
-    return reranked, generation
+def query_pipeline(pipeline, query):
+    from src.agent import NoopAgent
+    if not isinstance(pipeline.agent, NoopAgent):
+        def retrieve_fn(q):
+            initial = pipeline.retriever.retrieve(q)
+            return pipeline.reranker.rerank(q, initial)
+        chunks, decision = pipeline.agent.run(query, retrieve_fn)
+        if decision.intent == "OUT_OF_SCOPE":
+            generation = pipeline.generator.generate(query, [])
+            return [], generation
+        generation = pipeline.generator.generate(query, chunks)
+        return chunks, generation
+    else:
+        rewritten = pipeline.rewriter.rewrite(query)
+        initial = pipeline.retriever.retrieve(rewritten)
+        reranked = pipeline.reranker.rerank(rewritten, initial)
+        generation = pipeline.generator.generate(query, reranked)
+        return reranked, generation
