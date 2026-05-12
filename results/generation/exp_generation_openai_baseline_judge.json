@@ -1,0 +1,1232 @@
+{
+  "summary": {
+    "input_file": "results/generation/exp_generation_openai_baseline.json",
+    "n_questions": 122,
+    "eval_time_sec": 142.2,
+    "avg_faithfulness": 4.32,
+    "avg_relevance": 4.93,
+    "avg_completeness": 3.4
+  },
+  "per_question": [
+    {
+      "q_id": "Q001",
+      "question": "Какие сроки приема документов на бакалавриат в Москве на бюджетные места?",
+      "category": "admission_dates",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q002",
+      "question": "Когда заканчивается прием документов на платное обучение в Москве?",
+      "category": "admission_dates",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q003",
+      "question": "Когда последний день подать документы на программы со внутренними экзаменами ВШЭ?",
+      "category": "admission_dates",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q004",
+      "question": "до какого числа можно подать доки на бак",
+      "category": "admission_dates",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 3,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q005",
+      "question": "скока денег платить за вшэ",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q006",
+      "question": "Сколько программ бакалавриата можно выбрать в ВШЭ при поступлении?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q007",
+      "question": "В сколько вузов одновременно можно подавать документы?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q008",
+      "question": "Какие способы подачи документов доступны абитуриенту?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q009",
+      "question": "Что нужно для подачи документов в ВШЭ?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q010",
+      "question": "Можно ли подать документы онлайн через Госуслуги?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q011",
+      "question": "Если у меня уже есть высшее образование можно поступить на бюджет?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q012",
+      "question": "можно ли поступать на 2 высшее на бюджет",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q013",
+      "question": "Контакты приемной комиссии ВШЭ Москва?",
+      "category": "contacts",
+      "scores": {
+        "faithfulness": 1,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q014",
+      "question": "Какой email у приемной комиссии в Москве?",
+      "category": "contacts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q015",
+      "question": "На каком языке подается заявление в ВШЭ?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q016",
+      "question": "Какие минимальные баллы ЕГЭ нужны на ПМИ?",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q017",
+      "question": "Какие минимальные баллы на Прикладную математику и информатику?",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q018",
+      "question": "Какие минимальные баллы ЕГЭ на Программную инженерию?",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q019",
+      "question": "Какие баллы нужны на ПИ в вшэ",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q020",
+      "question": "Минимальные баллы на КН?",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 4,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q021",
+      "question": "Сколько баллов нужно на математику в ВШЭ?",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q022",
+      "question": "Какие минимальные баллы по русскому языку обычно требуются?",
+      "category": "minimum_scores",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q023",
+      "question": "На какие программы можно поступить только на платное?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 4,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q024",
+      "question": "Что такое БВИ?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q025",
+      "question": "Кто получает право на прием БВИ?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q026",
+      "question": "Сколько лет действуют результаты олимпиад для поступления?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q027",
+      "question": "В каких случаях засчитывают 100 баллов по предмету?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q028",
+      "question": "Какой минимальный балл ЕГЭ нужен для подтверждения олимпиады?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q029",
+      "question": "Можно ли использовать БВИ в нескольких вузах?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q030",
+      "question": "Олимпиада Высшая проба что дает?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q031",
+      "question": "Что дает победа во всеросе?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q032",
+      "question": "Дает ли региональный этап ВсОШ что-нибудь?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q033",
+      "question": "Какие индивидуальные достижения учитываются?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q034",
+      "question": "Сколько баллов дают за золотой значок ГТО?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q035",
+      "question": "Сколько баллов за аттестат с отличием?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q036",
+      "question": "Сколько баллов за волонтерство дают?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q037",
+      "question": "Какие документы нужны для подтверждения волонтерства?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q038",
+      "question": "Какой максимум баллов за индивидуальные достижения?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q039",
+      "question": "Можно ли суммировать ГТО и аттестат с отличием?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q040",
+      "question": "Что лучше выбрать для ИД аттестат с отличием или ГТО?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q041",
+      "question": "Сколько баллов за победу во всеросе как ИД?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q042",
+      "question": "За олимпиады из перечня сколько ИД дают?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q043",
+      "question": "Когда подавать документы для ИД?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 4,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q044",
+      "question": "А военная служба считается?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q045",
+      "question": "Сколько баллов за чемпиона России по спорту?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q046",
+      "question": "Что дает статус КМС?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 1
+      }
+    },
+    {
+      "q_id": "Q047",
+      "question": "Какие скидки есть для платников?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 4,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q048",
+      "question": "Какой максимальный размер скидки в ВШЭ?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q049",
+      "question": "Какая скидка победителю Высшей пробы?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q050",
+      "question": "Какая скидка призеру Высшей пробы?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q051",
+      "question": "Какую скидку получит участник заключительного этапа всероса?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q052",
+      "question": "Скидка призеру регионального этапа ВсОШ какая?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q053",
+      "question": "Сохранится ли скидка при переводе на другой факультет?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q054",
+      "question": "До какого числа подавать заявление на скидку?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q055",
+      "question": "Можно ли совмещать скидку и бюджет?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q056",
+      "question": "Что такое целевая квота?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q057",
+      "question": "Что такое отдельная квота?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q058",
+      "question": "Что такое особая квота?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q059",
+      "question": "Кому положена особая квота?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q060",
+      "question": "Что такое приоритеты зачисления?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q061",
+      "question": "Как работают приоритеты при зачислении?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q062",
+      "question": "На что соглашаться при подаче заявления?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q063",
+      "question": "Сколько времени дается на признание иностранного образования?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q064",
+      "question": "Что делать если у меня иностранный аттестат?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q065",
+      "question": "Какие программы есть на факультете компьютерных наук в Москве?",
+      "category": "programs",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q066",
+      "question": "Какие предметы нужны на программу Экономика?",
+      "category": "programs",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q067",
+      "question": "Что такое программа двух дипломов с университетом Кёнхи?",
+      "category": "programs",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q068",
+      "question": "Какие программы реализуются на английском языке?",
+      "category": "programs",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q069",
+      "question": "На какие программы есть творческие испытания?",
+      "category": "programs",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q070",
+      "question": "Где найти список всех программ бакалавриата Москва?",
+      "category": "programs",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q071",
+      "question": "Можно ли поступать в несколько кампусов ВШЭ одновременно?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q072",
+      "question": "Что значит сквозной приоритет?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q073",
+      "question": "Дают ли скидки выпускникам Лицея ВШЭ?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q074",
+      "question": "Какая скидка выпускникам Лицея ВШЭ?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q075",
+      "question": "Скидки для выпускников ФДП есть?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q076",
+      "question": "Я выпускник ФМШ что мне положено?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q077",
+      "question": "Когда апелляция?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q078",
+      "question": "Как изменить выбранные программы после подачи заявления?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q079",
+      "question": "Можно ли отозвать документы?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q080",
+      "question": "В каких классах должны быть результаты олимпиады для БВИ?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 4,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q081",
+      "question": "Что дает призер олимпиады Покори Воробьевы горы?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q082",
+      "question": "Олимпиада Ломоносов что дает?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q083",
+      "question": "На программе ПМИ какие олимпиады дают БВИ?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q084",
+      "question": "Какой минимальный балл ЕГЭ для подтверждения олимпиады для лиц с новых субъектов?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q085",
+      "question": "На какие программы дает БВИ призер Высшей пробы?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q086",
+      "question": "Какие документы об инвалидности нужны для специальных условий на экзаменах?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q087",
+      "question": "Как проходит апелляция?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q088",
+      "question": "Что такое ЕПГУ?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q089",
+      "question": "Что значит СНИЛС в требованиях к документам?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q090",
+      "question": "Что такое ПДн?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 1
+      }
+    },
+    {
+      "q_id": "Q091",
+      "question": "Можно ли подавать копии документов?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q092",
+      "question": "Когда нужен оригинал аттестата?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q093",
+      "question": "Какая стоимость обучения на ПМИ?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q094",
+      "question": "Сколько стоит учеба в ВШЭ?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q095",
+      "question": "На какую программу можно поступить без ЕГЭ?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q096",
+      "question": "Что такое централизованное тестирование?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q097",
+      "question": "Можно ли пересдать ЕГЭ перед поступлением?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q098",
+      "question": "А можно ли купить место в ВШЭ?",
+      "category": "out_of_scope",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q099",
+      "question": "Какая погода завтра в Москве?",
+      "category": "out_of_scope",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q100",
+      "question": "Расскажи анекдот",
+      "category": "out_of_scope",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q101",
+      "question": "Какой сегодня день недели?",
+      "category": "out_of_scope",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q102",
+      "question": "Как оценивается итоговое сочинение при поступлении?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q103",
+      "question": "Скока стоит общага?",
+      "category": "out_of_scope",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q104",
+      "question": "Когда последний день подачи документов?",
+      "category": "admission_dates",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q105",
+      "question": "Подскажите сроки приёма документов на ПМИ Москва",
+      "category": "admission_dates",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q106",
+      "question": "постпуление в вшэ как происходит",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q107",
+      "question": "можно ли подавать документы в вшэ если иду в 11 класс",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q108",
+      "question": "Сколько программ можно одновременно выбрать?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q109",
+      "question": "что такое ИД",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 1
+      }
+    },
+    {
+      "q_id": "Q110",
+      "question": "Как ИД учитываются?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q111",
+      "question": "Сколько баллов за олимпиаду можно получить если она не дает БВИ?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q112",
+      "question": "Заключительный этап ВсОШ как ИД сколько?",
+      "category": "individual_achievements",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 1
+      }
+    },
+    {
+      "q_id": "Q113",
+      "question": "Как часто обновляются скидки?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 4,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q114",
+      "question": "Можно ли получить две скидки сразу?",
+      "category": "discounts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q115",
+      "question": "Что значит право на 100 баллов?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q116",
+      "question": "Можно ли использовать 100 баллов одновременно по нескольким предметам?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q117",
+      "question": "Что делать если я не нашел ответ на свой вопрос?",
+      "category": "contacts",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "Q118",
+      "question": "Можно ли участвовать в олимпиаде в 10 классе и использовать результат?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 4,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "Q119",
+      "question": "Как работает многопрофильный конкурс на программе ФПМ?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q120",
+      "question": "Какие основания для отказа в приеме документов?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "Q121",
+      "question": "Можно ли подать документы за другого человека по доверенности?",
+      "category": "admission_general",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "Q122",
+      "question": "Что такое DANO?",
+      "category": "olympiads",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 2
+      }
+    }
+  ]
+}
