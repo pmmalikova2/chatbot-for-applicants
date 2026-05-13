@@ -1,0 +1,517 @@
+{
+  "summary": {
+    "config_name": "exp_test_set_best",
+    "n_chunks": 779,
+    "build_time_sec": 32.69,
+    "eval_time_sec": 31.51,
+    "overall": {
+      "n_in_scope": 20,
+      "doc_recall_at_1": 0.6,
+      "doc_recall_at_3": 0.9,
+      "doc_recall_at_5": 0.95,
+      "chunk_recall_at_3": 0.5,
+      "chunk_recall_at_5": 0.5,
+      "mrr": 0.7541666666666667
+    },
+    "by_category": {
+      "cost": {
+        "n_in_scope": 13,
+        "doc_recall_at_1": 0.38461538461538464,
+        "doc_recall_at_3": 0.8461538461538461,
+        "doc_recall_at_5": 0.9230769230769231,
+        "chunk_recall_at_3": 0.46153846153846156,
+        "chunk_recall_at_5": 0.46153846153846156,
+        "mrr": 0.6217948717948717
+      },
+      "exams": {
+        "n_in_scope": 7,
+        "doc_recall_at_1": 1.0,
+        "doc_recall_at_3": 1.0,
+        "doc_recall_at_5": 1.0,
+        "chunk_recall_at_3": 0.5714285714285714,
+        "chunk_recall_at_5": 0.5714285714285714,
+        "mrr": 1.0
+      }
+    },
+    "by_formulation_type": {
+      "formal": {
+        "n_in_scope": 9,
+        "doc_recall_at_1": 0.7777777777777778,
+        "doc_recall_at_3": 1.0,
+        "doc_recall_at_5": 1.0,
+        "chunk_recall_at_3": 0.6666666666666666,
+        "chunk_recall_at_5": 0.6666666666666666,
+        "mrr": 0.8888888888888888
+      },
+      "casual": {
+        "n_in_scope": 8,
+        "doc_recall_at_1": 0.625,
+        "doc_recall_at_3": 0.875,
+        "doc_recall_at_5": 1.0,
+        "chunk_recall_at_3": 0.375,
+        "chunk_recall_at_5": 0.375,
+        "mrr": 0.7604166666666667
+      },
+      "abbreviated": {
+        "n_in_scope": 3,
+        "doc_recall_at_1": 0.0,
+        "doc_recall_at_3": 0.6666666666666666,
+        "doc_recall_at_5": 0.6666666666666666,
+        "chunk_recall_at_3": 0.3333333333333333,
+        "chunk_recall_at_5": 0.3333333333333333,
+        "mrr": 0.3333333333333333
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "n_in_scope": 10,
+        "doc_recall_at_1": 0.4,
+        "doc_recall_at_3": 1.0,
+        "doc_recall_at_5": 1.0,
+        "chunk_recall_at_3": 0.3,
+        "chunk_recall_at_5": 0.3,
+        "mrr": 0.6833333333333333
+      },
+      "medium": {
+        "n_in_scope": 7,
+        "doc_recall_at_1": 0.8571428571428571,
+        "doc_recall_at_3": 0.8571428571428571,
+        "doc_recall_at_5": 0.8571428571428571,
+        "chunk_recall_at_3": 0.5714285714285714,
+        "chunk_recall_at_5": 0.5714285714285714,
+        "mrr": 0.8571428571428571
+      },
+      "hard": {
+        "n_in_scope": 3,
+        "doc_recall_at_1": 0.6666666666666666,
+        "doc_recall_at_3": 0.6666666666666666,
+        "doc_recall_at_5": 1.0,
+        "chunk_recall_at_3": 1.0,
+        "chunk_recall_at_5": 1.0,
+        "mrr": 0.75
+      }
+    }
+  },
+  "per_question": [
+    {
+      "q_id": "T001",
+      "question": "Сколько стоит обучение на Прикладной математике и информатике в 2026 году?",
+      "category": "cost",
+      "formulation_type": "formal",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D9",
+        "D2",
+        "D2",
+        "D8",
+        "D2"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T002",
+      "question": "скока стоит пми в вышке",
+      "category": "cost",
+      "formulation_type": "casual",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D8",
+        "D9",
+        "D2",
+        "D2",
+        "D2"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 0.5
+    },
+    {
+      "q_id": "T003",
+      "question": "Какая стоимость программной инженерии?",
+      "category": "cost",
+      "formulation_type": "formal",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D2",
+        "D9",
+        "D7",
+        "D8",
+        "D6"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 0.5
+    },
+    {
+      "q_id": "T004",
+      "question": "стоимость ПИ",
+      "category": "cost",
+      "formulation_type": "abbreviated",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D2",
+        "D9",
+        "D8",
+        "D7",
+        "D6"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 0.5
+    },
+    {
+      "q_id": "T005",
+      "question": "Сколько стоит учиться на экономике?",
+      "category": "cost",
+      "formulation_type": "casual",
+      "difficulty": "medium",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D9",
+        "D8",
+        "D9",
+        "D9",
+        "D8"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T006",
+      "question": "Какая самая дорогая программа в ВШЭ Москва?",
+      "category": "cost",
+      "formulation_type": "casual",
+      "difficulty": "hard",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D8",
+        "D8",
+        "D8",
+        "D9",
+        "D9"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 0,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 0.25
+    },
+    {
+      "q_id": "T007",
+      "question": "Сколько стоит юриспруденция очно-заочно?",
+      "category": "cost",
+      "formulation_type": "formal",
+      "difficulty": "medium",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D9",
+        "D8",
+        "D2",
+        "D1",
+        "D9"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T008",
+      "question": "цена на дизайн в вшэ",
+      "category": "cost",
+      "formulation_type": "casual",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D8",
+        "D8",
+        "D9",
+        "D9",
+        "D8"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 0.3333333333333333
+    },
+    {
+      "q_id": "T009",
+      "question": "Сколько стоит компьютерная безопасность?",
+      "category": "cost",
+      "formulation_type": "formal",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D8",
+        "D9",
+        "D2",
+        "D2",
+        "D6"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 0.5
+    },
+    {
+      "q_id": "T010",
+      "question": "стоимость бизнес информатики",
+      "category": "cost",
+      "formulation_type": "abbreviated",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D2",
+        "D9",
+        "D8",
+        "D5",
+        "D6"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 0.5
+    },
+    {
+      "q_id": "T011",
+      "question": "Когда можно подать апелляцию на результат вступительного испытания?",
+      "category": "exams",
+      "formulation_type": "formal",
+      "difficulty": "medium",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D1"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T012",
+      "question": "как подать апелляцию",
+      "category": "exams",
+      "formulation_type": "casual",
+      "difficulty": "easy",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D10"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T013",
+      "question": "Может ли результат апелляции ухудшить мою оценку?",
+      "category": "exams",
+      "formulation_type": "casual",
+      "difficulty": "medium",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D10"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T014",
+      "question": "Кто входит в апелляционную комиссию?",
+      "category": "exams",
+      "formulation_type": "formal",
+      "difficulty": "medium",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D10"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T015",
+      "question": "Можно ли подать апелляцию на результат ЕГЭ через ВШЭ?",
+      "category": "exams",
+      "formulation_type": "formal",
+      "difficulty": "hard",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D1"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T016",
+      "question": "решение апелляционной комиссии можно обжаловать?",
+      "category": "exams",
+      "formulation_type": "casual",
+      "difficulty": "medium",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D10"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T017",
+      "question": "Сколько стоит востоковедение?",
+      "category": "cost",
+      "formulation_type": "formal",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D9",
+        "D8",
+        "D9",
+        "D2",
+        "D9"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T018",
+      "question": "какая цена на журналистику",
+      "category": "cost",
+      "formulation_type": "casual",
+      "difficulty": "easy",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D9",
+        "D8",
+        "D8",
+        "D8",
+        "D8"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 0,
+      "chunk_recall_at_5": 0,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T019",
+      "question": "Какой срок полномочий апелляционной комиссии?",
+      "category": "exams",
+      "formulation_type": "formal",
+      "difficulty": "hard",
+      "expected_doc_id": "D10",
+      "retrieved_doc_ids": [
+        "D10",
+        "D10",
+        "D10",
+        "D10",
+        "D10"
+      ],
+      "doc_recall_at_1": 1,
+      "doc_recall_at_3": 1,
+      "doc_recall_at_5": 1,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 1.0
+    },
+    {
+      "q_id": "T020",
+      "question": "Расскажи про обучение на КН онлайн",
+      "category": "cost",
+      "formulation_type": "abbreviated",
+      "difficulty": "medium",
+      "expected_doc_id": "D9",
+      "retrieved_doc_ids": [
+        "D6",
+        "D6",
+        "D5",
+        "D6",
+        "D2"
+      ],
+      "doc_recall_at_1": 0,
+      "doc_recall_at_3": 0,
+      "doc_recall_at_5": 0,
+      "chunk_recall_at_3": 1,
+      "chunk_recall_at_5": 1,
+      "mrr": 0.0
+    }
+  ]
+}
