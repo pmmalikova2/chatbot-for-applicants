@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "input_file": "results/generation/exp_test_set_best_gen.json",
+    "n_questions": 20,
+    "eval_time_sec": 30.3,
+    "avg_faithfulness": 4.0,
+    "avg_relevance": 5.0,
+    "avg_completeness": 3.65
+  },
+  "per_question": [
+    {
+      "q_id": "T001",
+      "question": "Сколько стоит обучение на Прикладной математике и информатике в 2026 году?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T002",
+      "question": "скока стоит пми в вышке",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T003",
+      "question": "Какая стоимость программной инженерии?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "T004",
+      "question": "стоимость ПИ",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "T005",
+      "question": "Сколько стоит учиться на экономике?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "T006",
+      "question": "Какая самая дорогая программа в ВШЭ Москва?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "T007",
+      "question": "Сколько стоит юриспруденция очно-заочно?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 1,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "T008",
+      "question": "цена на дизайн в вшэ",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 1,
+        "relevance": 5,
+        "completeness": 1
+      }
+    },
+    {
+      "q_id": "T009",
+      "question": "Сколько стоит компьютерная безопасность?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T010",
+      "question": "стоимость бизнес информатики",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "T011",
+      "question": "Когда можно подать апелляцию на результат вступительного испытания?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 3,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "T012",
+      "question": "как подать апелляцию",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "completeness": 3
+      }
+    },
+    {
+      "q_id": "T013",
+      "question": "Может ли результат апелляции ухудшить мою оценку?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 2,
+        "relevance": 5,
+        "completeness": 2
+      }
+    },
+    {
+      "q_id": "T014",
+      "question": "Кто входит в апелляционную комиссию?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "T015",
+      "question": "Можно ли подать апелляцию на результат ЕГЭ через ВШЭ?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 4
+      }
+    },
+    {
+      "q_id": "T016",
+      "question": "решение апелляционной комиссии можно обжаловать?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T017",
+      "question": "Сколько стоит востоковедение?",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T018",
+      "question": "какая цена на журналистику",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T019",
+      "question": "Какой срок полномочий апелляционной комиссии?",
+      "category": "exams",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 5
+      }
+    },
+    {
+      "q_id": "T020",
+      "question": "Расскажи про обучение на КН онлайн",
+      "category": "cost",
+      "scores": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "completeness": 1
+      }
+    }
+  ]
+}
