@@ -27,12 +27,27 @@ class IndexedPipeline:
 
 
 def build_index(cfg: ExperimentConfig) -> IndexedPipeline:
+    import csv
+    sources_map = {}
+    sources_path = "data/sources.csv"
+    try:
+        with open(sources_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                sources_map[row["doc_id"]] = row
+    except FileNotFoundError:
+        pass
+
     docs = ingest_all()
     for d in docs:
         d.raw_text = apply_preprocessing(d.raw_text, cfg.preprocessing)
         d.pages = [apply_preprocessing(p, cfg.preprocessing) for p in d.pages]
 
     chunks = chunk_all(docs, cfg.chunker)
+    for chunk in chunks:
+        src = sources_map.get(chunk.doc_id, {})
+        title = src.get("title", "")
+        if title and not chunk.text.startswith(f"[{title}]"):
+            chunk.text = f"[{title}]\n{chunk.text}"
 
     embedder = build_embedder(cfg.embedder)
     if isinstance(embedder, TfidfEmbedder):
