@@ -1,0 +1,32 @@
+name: exp_embedder_e5_large
+collection_name: hse_emb_e5_large
+qdrant_host: localhost
+qdrant_port: 6333
+qdrant_path: data/qdrant_local_e5_large
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-large
+
+retriever:
+  type: dense
+  top_k: 5
+
+reranker:
+  type: none
+
+query_rewriter: {}
+
+generator:
+  type: none
