@@ -1,0 +1,36 @@
+name: exp_test_set_rewrite
+collection_name: hse_test_set_rewrite
+qdrant_host: localhost
+qdrant_port: 6333
+qdrant_path: data/qdrant_local_test_set_rewrite
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: dense
+  top_k: 5
+
+reranker:
+  type: none
+
+query_rewriter:
+  model: gpt-4o-mini
+
+generator:
+  type: none
+
+query_rewriter:
+  model: gpt-4o-mini

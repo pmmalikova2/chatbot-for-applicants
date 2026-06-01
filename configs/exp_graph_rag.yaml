@@ -1,0 +1,38 @@
+name: exp_graph_rag
+collection_name: hse_graph_rag
+qdrant_host: localhost
+qdrant_port: 6333
+qdrant_path: data/qdrant_local_graph_rag
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: dense
+  top_k: 15
+
+reranker:
+  type: none
+
+query_rewriter: {}
+
+agent: {}
+
+graph_rag:
+  enabled: true
+  model: gpt-4o-mini
+
+generator:
+  type: none

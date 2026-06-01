@@ -1,0 +1,33 @@
+name: exp_generation_baseline
+collection_name: hse_gen_baseline
+qdrant_host: localhost
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: dense
+  top_k: 3
+
+reranker:
+  type: none
+
+generator:
+  type: ollama
+  model: qwen2.5:7b-instruct
+  temperature: 0.2
+  max_tokens: 400
+  base_url: http://localhost:11434

@@ -1,0 +1,29 @@
+name: baseline
+collection_name: hse_admission_baseline
+qdrant_host: 127.0.0.1
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: tfidf
+  max_features: 4096
+
+retriever:
+  type: dense
+  top_k: 5
+
+reranker:
+  type: none
+
+generator:
+  type: none

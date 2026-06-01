@@ -1,0 +1,33 @@
+name: exp_generation_openai_baseline
+collection_name: hse_gen_openai_baseline
+qdrant_host: localhost
+qdrant_port: 6333
+qdrant_path: data/qdrant_local_openai_baseline
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: dense
+  top_k: 3
+
+reranker:
+  type: none
+
+generator:
+  type: openai
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 400

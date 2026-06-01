@@ -1,0 +1,29 @@
+name: exp_embedder_minilm
+collection_name: hse_emb_minilm
+qdrant_host: localhost
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+
+retriever:
+  type: dense
+  top_k: 5
+
+reranker:
+  type: none
+
+generator:
+  type: none

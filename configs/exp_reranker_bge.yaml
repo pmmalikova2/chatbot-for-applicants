@@ -1,0 +1,31 @@
+name: exp_reranker_bge
+collection_name: hse_rerank_bge
+qdrant_host: localhost
+qdrant_port: 6333
+
+preprocessing:
+  lowercase: false
+  remove_extra_whitespace: true
+  remove_page_numbers: true
+  remove_headers_footers: false
+
+chunker:
+  type: recursive
+  size: 1200
+  overlap: 200
+
+embedder:
+  type: sentence_transformer
+  model: intfloat/multilingual-e5-base
+
+retriever:
+  type: dense
+  top_k: 10
+
+reranker:
+  type: cross_encoder
+  model: BAAI/bge-reranker-v2-m3
+  top_k: 5
+
+generator:
+  type: none
