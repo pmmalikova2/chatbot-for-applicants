@@ -9,6 +9,7 @@ env/
 
 # Jupyter
 .ipynb_checkpoints/
+*.ipynb
 
 # IDE
 .vscode/
@@ -18,12 +19,13 @@ env/
 # Models / cache
 .cache/
 models/
-*.bin
+*.bin/
 
 # Qdrant local data
 qdrant_storage/
+data/qdrant_local_*/
 
-# Experiment artifacts (большие)
+# Experiment artifacts
 results/*/raw_*.json
 
 # Secrets
