@@ -30,3 +30,4 @@ results/*/raw_*.json
 
 # Secrets
 .env
+data/qdrant*/
