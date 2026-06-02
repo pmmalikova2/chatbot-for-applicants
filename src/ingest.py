@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Union
 import csv
 import pypdf
 
@@ -19,7 +20,7 @@ class SourceDocument:
             self.pages = []
 
 
-def load_sources(sources_path: str | Path) -> list[SourceDocument]:
+def load_sources(sources_path: Union[str, Path]) -> list[SourceDocument]:
     docs = []
     with open(sources_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -34,7 +35,7 @@ def load_sources(sources_path: str | Path) -> list[SourceDocument]:
     return docs
 
 
-def extract_pdf_text(pdf_path: str | Path) -> tuple[str, list[str]]:
+def extract_pdf_text(pdf_path: Union[str, Path]) -> tuple[str, list[str]]:
     pdf_path = Path(pdf_path)
     reader = pypdf.PdfReader(str(pdf_path))
     pages = []
@@ -46,8 +47,8 @@ def extract_pdf_text(pdf_path: str | Path) -> tuple[str, list[str]]:
 
 
 def ingest_all(
-    sources_path: str | Path = "data/sources.csv",
-    pdfs_dir: str | Path = "data/raw_pdfs",
+    sources_path: Union[str, Path] = "data/sources.csv",
+    pdfs_dir: Union[str, Path] = "data/raw_pdfs",
 ) -> list[SourceDocument]:
     docs = load_sources(sources_path)
     pdfs_dir = Path(pdfs_dir)

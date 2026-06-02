@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Optional
 from src.config import ExperimentConfig
 from src.ingest import ingest_all, SourceDocument
 from src.preprocessing import apply_preprocessing
@@ -18,7 +19,7 @@ class IndexedPipeline:
     cfg: ExperimentConfig
     chunks: list[Chunk]
     embedder: object
-    store: QdrantStore | None
+    store: Optional[QdrantStore]
     retriever: object
     reranker: object
     generator: object

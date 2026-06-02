@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Union
 import yaml
 
 
@@ -66,7 +67,7 @@ class ExperimentConfig:
     graph_rag: dict = field(default_factory=dict)
 
 
-def load_config(path: str | Path) -> ExperimentConfig:
+def load_config(path: Union[str, Path]) -> ExperimentConfig:
     with open(path, "r", encoding="utf-8") as f:
         raw = yaml.safe_load(f)
 
